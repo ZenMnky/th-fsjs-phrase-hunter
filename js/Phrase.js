@@ -9,10 +9,38 @@
     }
 
     /**
-     * Display phrae on game board
+     * Display phrase on game board
+     * adds letter placeholders to the display when the game starts
+     * 
      */
     addPhraseToDisplay() {
+        const phraseDiv = document.querySelector('div#phrase ul');
+        // const phraseDivUl = phraseDiv.firstChild;
 
+        let selectedPhrase = game.activePhrase['phrase'];
+        let phraseAsArray = selectedPhrase.split("");
+        
+        phraseAsArray.forEach(value => {
+            let newLi = document.createElement('li');
+            let isLetter = new RegExp('[a-z]', 'i');
+            let isWhitespace = new RegExp(' ');
+            
+            newLi.innerText = value;
+            if (isLetter.test(value)){
+                newLi.className = 'letter';
+            } else if (isWhitespace.test(value)){
+                newLi.className = 'space';
+            }
+            
+            phraseDiv.appendChild(newLi);
+        });
+
+        
+        console.log(selectedPhrase);
+        console.log(phraseAsArray);     
+        
+        console.log(`Phrase div: `);
+        console.log(phraseDiv);
     }
 
     /**

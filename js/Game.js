@@ -6,7 +6,7 @@
      constructor() {
          this.missed = 0;
          this.phrases = this.createPhrases();
-         this.activePhrase = null;
+         this.activePhrase = this.getRandomPhrase();
     }
 
     /**
