@@ -131,6 +131,33 @@
     }
 
     /**
+     *  handleKeydown
+     * 
+     *  Allows user to use keyboard to play the game
+     *  Matches the keyed character with the on-screen keyboard 
+     */
+    handleKeydown(key){
+        //if the button is a letter, then find the corresponding button and pass it to the handleInteraction method
+
+        const isLetter = new RegExp('^[a-z]$', 'i');
+        let keyPressed = key.key.toLowerCase();
+        let isLetterTest = isLetter.test(keyPressed);
+        
+        if (isLetterTest) {
+            //select the corresponding li and pass it to handleInteraction()
+            const keyButtons = document.querySelectorAll('button.key');
+            const keyButtonsArray = Array.from(keyButtons);
+               
+            const correspondingButton = keyButtonsArray.find(index => (index.innerText === keyPressed));
+
+            if (!correspondingButton.hasAttribute('disabled')){
+                this.handleInteraction(correspondingButton);
+            }
+            
+        }
+    }
+
+    /**
      * Resets the game
      * 
      * Removes all li elements from the phrase ul list
