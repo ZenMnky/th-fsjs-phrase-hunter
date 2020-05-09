@@ -8,6 +8,6 @@
 - A player continues to select letters until they guess the phrase (and win), or make five incorrect guesses (and lose).
 ==============
 Custom Stylings:
-- 
-- 
-- 
+- TBD
+- TBD
+- TBD

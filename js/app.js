@@ -1,28 +1,22 @@
 /* Treehouse FSJS Techdegree
  * Project 4 - OOP Game App
- * app.js */
+ * app.js 
+ * Vanilla JS
+ * 
+ * JS programmed by Justin Hager (ZenMnky) 🐒
+ */
 
- 
- 
-//  const logPhrase = (phrase) => {
-//      console.log(`Phrase - phrase: `, phrase.phrase);
-//  };
+let game = null;
 
-const game = new Game();
+document.querySelector('button#btn__reset')
+    .addEventListener('click', () => {
+        if (game){
+            game.reset();
+        }
+        game = new Game();
+        game.startGame();
+});
 
-// ⚠️ Testing Code lies ahead ⚠️
+ document.addEventListener('click', e => game.handleInteraction(e.target));
 
-// game.phrases.forEach((phrase, index) => {
-//     console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
-// });
 
-// const logPhrase = (phrase) => {
-//     console.log(`Phrase - phrase: ${phrase.phrase}`);
-// };
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-
-game. getRandomPhrase(). addPhraseToDisplay() ;

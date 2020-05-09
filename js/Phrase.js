@@ -15,8 +15,7 @@
      */
     addPhraseToDisplay() {
         const phraseDiv = document.querySelector('div#phrase ul');
-        // const phraseDivUl = phraseDiv.firstChild;
-
+        
         let selectedPhrase = game.activePhrase['phrase'];
         let phraseAsArray = selectedPhrase.split("");
         
@@ -26,28 +25,40 @@
             let isWhitespace = new RegExp(' ');
             
             newLi.innerText = value;
+            newLi.classList.add('hidden');
             if (isLetter.test(value)){
-                newLi.className = 'letter';
+                newLi.classList.add('letter');
+                newLi.classList.add(value.toLowerCase());
             } else if (isWhitespace.test(value)){
-                newLi.className = 'space';
+                newLi.classList.add('space');
             }
+            
             
             phraseDiv.appendChild(newLi);
         });
-
-        
-        console.log(selectedPhrase);
-        console.log(phraseAsArray);     
-        
-        console.log(`Phrase div: `);
-        console.log(phraseDiv);
     }
 
     /**
-     * checkLetter(): checks to see if the letter selected by the player matches a letter in the phrase.
-     */
+    * Checks if passed letter is in phrase
+    * @param {string} letter - Letter to check
+    * @returns {boolean} If letter is present, return true
+    */
+    checkLetter(letter) {
+        return (game.activePhrase.phrase.toLowerCase().indexOf(letter) >= 0) ? true : false;
+    } ;
 
     /**
-    * showMatchedLetter(): reveals the letter(s) on the board that matches the player's selection. To reveal the matching letter(s), select all of the letter DOM elements that have a CSS class name that matches the selected letter and replace each selected element's hide CSS class with the show CSS class.
+    * Displays passed letter on screen after a match is found
+    * @param {string} letter - Letter to display
     */
+    showMatchedLetter(letter) { 
+        const phraseItems = document.querySelector('div#phrase ul').childNodes;
+        phraseItems.forEach(item => {
+            if (item.classList.contains(letter)) {
+                item.classList.toggle('hidden');
+                item.classList.toggle('show');
+            }
+        })
+
+    } ;
  }
