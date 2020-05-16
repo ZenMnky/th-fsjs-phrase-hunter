@@ -34,9 +34,5 @@ document.querySelector('button#btn__reset')
 document.addEventListener('click', e => game.handleInteraction(e.target) );
 document.addEventListener('keydown', e => game.handleKeydown(e) );
 
-// if(game) {
-//     document.addEventListener('click', e => game.handleInteraction(e.target) );
-//     document.addEventListener('keydown', e => game.handleKeydown(e) );
-// }
  
 
