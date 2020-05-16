@@ -97,10 +97,10 @@
 
         if (gameWon){
             screenOverlay.className = 'win';
-            gameOverH1.innerText = `You've Won!!!` + ' 😁';
+            gameOverH1.innerText = ` 😁 Victory ⚔️ `;
         } else {
             screenOverlay.className = 'lose';
-            gameOverH1.innerText = 'game over ☠️'; 
+            gameOverH1.innerText = 'Failure ☠️'; 
         }
     };
 

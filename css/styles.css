@@ -20,10 +20,11 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Black Ops One', cursive; /*  ❗️ modified */
 }
 
 body {
+  background-color: #4b5320; /* ❗️ added  */
   justify-content: space-evenly;
   flex-direction: column;
   display: flex;
@@ -40,6 +41,7 @@ h2 {
   text-transform: uppercase;
   font-size: var(--font-size-large);
   margin: 0;
+  color: #B3B3B3;
 }
 
 h1 {
@@ -86,7 +88,7 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: black; /*  ❗️ modified */
 }
 
 

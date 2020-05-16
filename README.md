@@ -7,7 +7,9 @@
 - Uses JavaScript and OOP to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.
 - A player continues to select letters until they guess the phrase (and win), or make five incorrect guesses (and lose).
 ==============
-Custom Stylings:
-- TBD
-- TBD
-- TBD
+## Custom Style Changes To:
+### Army Theme
+- Font
+- Background color
+- live/lost 'heart' icons
+- Header color
