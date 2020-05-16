@@ -1,17 +1,16 @@
 /* Treehouse FSJS Techdegree
  * Project 4 - OOP Game App
- * Phrase.js */
+ * Phrase.js 
+ */
 
  class Phrase {
      constructor(phrase){
-         //phrase: this is the actual phrase the Phrase object is representing. This property should be set to the phrase parameter, but converted to all lower case.
-            this.phrase = phrase;
+         this.phrase = phrase;
     }
 
     /**
      * Display phrase on game board
      * adds letter placeholders to the display when the game starts
-     * 
      */
     addPhraseToDisplay() {
         const phraseDiv = document.querySelector('div#phrase ul');

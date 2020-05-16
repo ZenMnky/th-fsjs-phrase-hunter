@@ -162,7 +162,7 @@
      * 
      * Removes all li elements from the phrase ul list
      * Enable all of the on-screen buttons
-     *  Reset each buton's class to 'key' only
+     * Reset each button's class to 'key' only
      * Reset heart images to display all live hearts
      */
     reset() {
@@ -170,7 +170,7 @@
         const phraseDiv = document.querySelector('div#phrase ul');
         phraseDiv.textContent = '';
         
-        // :key: Reset key buttons' classes 
+        // :key: Reset key buttons' classes
         const qwertyButtons = document.querySelectorAll('button.key');
         qwertyButtons.forEach(element => {
             element.classList.remove('wrong');
