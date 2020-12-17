@@ -1,15 +1,14 @@
-# th-fsjs-phrase-hunter
+# Phrase Hunter
+- Frontend web app
 - TreeHouse Full Stack JavaScript Techdegree
 - Unit 5 Project - Phrase Hunter Browser App
 
-==============
-- A browser-based, word guessing game.
-- Uses JavaScript and OOP to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.
+[Live Link](https://zenmnky.github.io/th-fsjs-phrase-hunter/)
+
+## Description
+- A browser-based, phrase guessing game.
+- Uses JavaScript and OOP to select a random, hidden phrase, which a player tries to guess through screen interaction or keystrokes
 - A player continues to select letters until they guess the phrase (and win), or make five incorrect guesses (and lose).
-==============
-## Custom Style Changes To:
-### Army Theme
-- Font
-- Background color
-- live/lost 'heart' icons
-- Header color
+
+## Technologies
+HTML5, CSS3, JavaScript
